@@ -1,0 +1,39 @@
+main{
+    overflow: hidden;
+    width: calc(100vw/1.5);
+    height: 96vh;
+    margin-top: 2vh;
+    margin-right: auto;
+    margin-bottom: 2vh;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    .open{
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        color: white;
+        transition: all .5s;
+        &:hover{
+            cursor: pointer;    
+        }
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .close, .open{
+        display:none !important;
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    main{
+        width: 100vw;
+        margin: 0;
+        height: 100vh;
+    }
+}
